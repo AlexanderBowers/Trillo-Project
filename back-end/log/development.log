@@ -1,0 +1,63 @@
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBoards (20210125225326)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "boards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210125225326"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLists (20210125225339)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0d3f677137"
+FOREIGN KEY ("board_id")
+  REFERENCES "boards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210125225339"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20210125225403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b8df67b5"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210125225403"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-25 22:56:53.041738"], ["updated_at", "2021-01-25 22:56:53.041738"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Create (2.9ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test_board"], ["created_at", "2021-01-25 22:56:58.289598"], ["updated_at", "2021-01-25 22:56:58.289598"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.7ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "myList"], ["board_id", 1], ["created_at", "2021-01-25 22:56:58.339440"], ["updated_at", "2021-01-25 22:56:58.339440"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testTask"], ["list_id", 1], ["created_at", "2021-01-25 22:56:58.358458"], ["updated_at", "2021-01-25 22:56:58.358458"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "task2"], ["list_id", 1], ["created_at", "2021-01-25 22:56:58.367008"], ["updated_at", "2021-01-25 22:56:58.367008"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.8ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "secondList"], ["board_id", 1], ["created_at", "2021-01-25 22:56:58.375265"], ["updated_at", "2021-01-25 22:56:58.375265"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "thirdTask"], ["list_id", 2], ["created_at", "2021-01-25 22:56:58.383567"], ["updated_at", "2021-01-25 22:56:58.383567"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lastTask"], ["list_id", 2], ["created_at", "2021-01-25 22:56:58.395753"], ["updated_at", "2021-01-25 22:56:58.395753"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
