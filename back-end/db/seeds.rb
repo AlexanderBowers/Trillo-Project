@@ -15,3 +15,7 @@ task2 = Task.create(name: 'task2', list_id: 1)
 list2 = List.create(name: 'secondList', board_id: 1)
 task3 = Task.create(name: 'thirdTask', list_id: 2)
 task4 = Task.create(name: 'lastTask', list_id: 2)
+
+list3 = List.create(name: 'third list', board_id: 1)
+list4 = List.create(name: 'fourth list', board_id: 1)
+list5 = List.create(name: 'fifth list', board_id: 1)
