@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+List.all.destroy_all
+Task.all.destroy_all
 
 board = Board.create(name: 'test_board')
 list1 = List.create(name: 'myList', board_id: 1)
