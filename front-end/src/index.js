@@ -7,23 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
   fetchList();
   setTimeout(() => { fetchTasks()}, 3);
+  let listForm = document.querySelector('.list_form')
+  listForm.addEventListener("submit", handleSubmit)
 });
+
+
+
 
 // fetch functions
 function fetchBoards() {
-  fetch(`${BASEURL}/boards`)
+  fetch(BOARDURL)
   .then (res => res.json())
   .then (board => renderBoard(board))
 }
 
 function fetchList() {
-  fetch(`${BASEURL}/lists`)
+  fetch(LISTURL)
   .then (res => res.json())
   .then (lists => lists.forEach((list) => {renderList(list)}))
 }
 
 function fetchTasks() {
-    fetch(`${BASEURL}/tasks`)
+    fetch(TASKURL)
     .then(resp => resp.json())
     .then(tasks => tasks.forEach((task) => renderTask(task)))
 }
@@ -51,17 +56,18 @@ function renderList(list){
   let btn = document.createElement('button')
   btn.textContent = 'delete list'
   btn.addEventListener('click', (e) => {
-    e.preventDefault()  
+    e.preventDefault()
     deleteList(list)
-    listDiv.remove()})
- 
+    listDiv.remove()
+  })
+
   let ul = document.createElement('ul')
   ul.id = `list ${list.id}`
 
   h6.appendChild(btn)
   listDiv.append(h6, ul)
   board.append(listDiv)
-  
+
 }
 
 function renderTask(task){
@@ -75,7 +81,8 @@ function renderTask(task){
   btn.addEventListener('click', (e) => {
       e.preventDefault()
       deleteTask(task)
-      li.remove()})
+      li.remove()
+    })
 
   li.appendChild(btn)
   ul.appendChild(li)
@@ -91,4 +98,26 @@ function deleteTask(task){
     fetch(`${BASEURL}/tasks/${task.id}`, {
         method: 'DELETE',
     }).then(resp => resp.json())
+}
+
+// Post functions
+function postList(newList) {
+  fetch(LISTURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newList)
+  })
+  .then (res => res.json())
+  .then (newList => renderList(newList))
+}
+
+//handlers
+function handleSubmit(e){
+  e.preventDefault()
+  let newList = {
+    name: e.target['list-name'].value
+  }
+  postList(newList)
 }
