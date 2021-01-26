@@ -18,6 +18,10 @@ p {
     background-color: #444444;
 }
  */
+.theBoard{
+    margin: auto;
+    width: 50%;
+}
 .theList {
     display: inline-block;
     width: 25%;
