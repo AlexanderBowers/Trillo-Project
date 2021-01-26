@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchList();
   setTimeout(() => { fetchTasks()}, 3);
   let listForm = document.querySelector('.list_form')
-  listForm.addEventListener("submit", handleSubmit)
+  listForm.addEventListener("submit", handleSubmitList)
+  let taskForm = document.querySelector('.task_form')
+  taskForm.addEventListener("submit", handleSubmitTask)
 });
 
 
@@ -143,10 +145,18 @@ function postTask(div, taskName) {
 }
 
 //handlers
-function handleSubmit(e){
+function handleSubmitList(e){
   e.preventDefault()
   let newList = {
     name: e.target['list-name'].value
   }
   postList(newList)
+}
+
+function handleSubmitTask(e){
+  e.preventDefault()
+  let newTask = {
+    name: e.target['task-name'].value
+  }
+  postTask(newTask)
 }
