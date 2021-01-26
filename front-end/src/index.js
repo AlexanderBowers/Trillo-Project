@@ -61,11 +61,25 @@ function renderList(list){
     listDiv.remove()
   })
 
+  //creating uL for tasks
   let ul = document.createElement('ul')
   ul.id = `list ${list.id}`
 
+  //creating form for new tasks
+  let taskForm = document.querySelector('.task_form')
+  let newForm = taskForm.cloneNode(true);
+
+  newForm.addEventListener("submit", (e) => {
+    let taskName = document.getElementById('task-name')
+    e.preventDefault()
+    postTask(listDiv, taskName)
+  })
+
+
+  //appending elements
+
   h6.appendChild(btn)
-  listDiv.append(h6, ul)
+  listDiv.append(h6, ul, newForm)
   board.append(listDiv)
 
 }
@@ -111,6 +125,21 @@ function postList(newList) {
   })
   .then (res => res.json())
   .then (newList => renderList(newList))
+}
+
+function postTask(div, taskName) {
+  fetch(TASKURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      'name': `${taskName.value}`,
+      'list_id': div.id
+    })
+  })
+  .then (res => res.json())
+  .then (newTask => renderTask(newTask))
 }
 
 //handlers

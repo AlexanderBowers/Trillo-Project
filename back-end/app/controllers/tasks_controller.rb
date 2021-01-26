@@ -10,8 +10,8 @@ class TasksController < ApplicationController
     end
 
     def create
-        task = Task.create(name: params[:name], list_id: 1)
-        render json: list
+        task = Task.create(name: params[:name], list_id: params[:list_id])
+        render json: task
     end
 
     def destroy
