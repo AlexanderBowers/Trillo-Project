@@ -6,6 +6,7 @@ const TASKURL = `${BASEURL}/tasks`
 document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
   fetchList();
+  setTimeout(() => { fetchTasks()}, 3);
 });
 
 // fetch functions
@@ -21,6 +22,13 @@ function fetchList() {
   .then (lists => lists.forEach((list) => {renderList(list)}))
 }
 
+function fetchTasks() {
+    fetch(`${BASEURL}/tasks`)
+    .then(resp => resp.json())
+    .then(tasks => tasks.forEach((task) => renderTask(task)))
+}
+
+
 
 // render functions
 function renderBoard(board) {
@@ -31,10 +39,56 @@ function renderBoard(board) {
 }
 
 function renderList(list){
-  let div = document.querySelector(".theList")
+  let board = document.querySelector(".theBoard")
+  let listDiv = document.createElement('div')
+  listDiv.classList.add('theList')
+  listDiv.id = list.id
+
   let h6 = document.createElement('h6')
   h6.textContent = list.name
-  let button = document.createElement('button')
 
-  div.append(h6)
+  //add button to delete list
+  let btn = document.createElement('button')
+  btn.textContent = 'delete list'
+  btn.addEventListener('click', (e) => {
+    e.preventDefault()  
+    deleteList(list)
+    listDiv.remove()})
+ 
+  let ul = document.createElement('ul')
+  ul.id = `list ${list.id}`
+
+  h6.appendChild(btn)
+  listDiv.append(h6, ul)
+  board.append(listDiv)
+  
+}
+
+function renderTask(task){
+  let ul = document.getElementById(`list ${task.list_id}`)
+  let li = document.createElement('li')
+  li.textContent = task.name
+
+  //add button to delete li
+  let btn = document.createElement('button')
+  btn.textContent = 'X'
+  btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      deleteTask(task)
+      li.remove()})
+
+  li.appendChild(btn)
+  ul.appendChild(li)
+}
+
+//delete functions
+function deleteList(list){
+    fetch(`${BASEURL}/lists/${list.id}`, {
+        method: 'DELETE',
+    }).then(resp => resp.json())
+}
+function deleteTask(task){
+    fetch(`${BASEURL}/tasks/${task.id}`, {
+        method: 'DELETE',
+    }).then(resp => resp.json())
 }
