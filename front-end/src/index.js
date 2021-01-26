@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchList();
   setTimeout(() => { fetchTasks()}, 3);
   let listForm = document.querySelector('.list_form')
-  listForm.addEventListener("submit", handleSubmit)
+  listForm.addEventListener("submit", handleSubmitList)
+  let taskForm = document.querySelector('.task_form')
+  taskForm.addEventListener("submit", handleSubmitTask)
 });
 
 
@@ -113,11 +115,31 @@ function postList(newList) {
   .then (newList => renderList(newList))
 }
 
+function postTask(newTask) {
+  fetch(TASKURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newTask)
+  })
+  .then (res => res.json())
+  .then (newTask => renderTask(newTask))
+}
+
 //handlers
-function handleSubmit(e){
+function handleSubmitList(e){
   e.preventDefault()
   let newList = {
     name: e.target['list-name'].value
   }
   postList(newList)
+}
+
+function handleSubmitTask(e){
+  e.preventDefault()
+  let newTask = {
+    name: e.target['task-name'].value
+  }
+  postTask(newTask)
 }
