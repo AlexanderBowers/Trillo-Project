@@ -68,12 +68,11 @@ function renderList(list){
   //creating form for new tasks
   let taskForm = document.querySelector('.task_form')
   let newForm = taskForm.cloneNode(true);
-  
 
   newForm.addEventListener("submit", (e) => {
-    let taskName = document.getElementById('task-name')
     e.preventDefault()
-    postTask(listDiv, taskName)
+    let newTask = e.target.childNodes[4].value
+    postTask(listDiv, newTask)
   })
 
   //appending elements
@@ -129,15 +128,13 @@ function postList(newList) {
 }
 
 function postTask(div, taskName) {
-  let test = taskName
-  debugger
   fetch(TASKURL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      'name': `${taskName.value}`,
+      'name': `${taskName}`,
       'list_id': div.id
     })
   })
