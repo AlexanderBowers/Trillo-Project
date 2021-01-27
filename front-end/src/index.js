@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
   fetchList();
   setTimeout(() => { fetchTasks()}, 3);
-  let listForm = document.querySelector('.list_form')
-  listForm.addEventListener("submit", handleSubmitList)
-  let taskForm = document.querySelector('.task_form')
-  taskForm.addEventListener("submit", handleSubmitTask)
 });
 
 
@@ -24,7 +20,7 @@ function fetchBoards() {
 }
 
 function fetchList() {
-  fetch(LISTURL)
+  fetch(`${BASEURL}/lists`)
   .then (res => res.json())
   .then (lists => lists.forEach((list) => {renderList(list)}))
 }
@@ -44,7 +40,6 @@ function renderBoard(board) {
   h2.textContent = board[0].name
   div.append(h2)
 }
-
 
 function renderList(list){
   let divRow = document.querySelector(".row")
@@ -73,6 +68,7 @@ function renderList(list){
   //creating form for new tasks
   let taskForm = document.querySelector('.task_form')
   let newForm = taskForm.cloneNode(true);
+  
 
   newForm.addEventListener("submit", (e) => {
     let taskName = document.getElementById('task-name')
@@ -80,44 +76,15 @@ function renderList(list){
     postTask(listDiv, taskName)
   })
 
-
   //appending elements
 
   h6.appendChild(btn)
-  listDiv.append(h6, ul)
+  listDiv.append(h6, ul, newForm)
   divColumn.append(listDiv)
   divRow.append(divColumn)
 
 
 }
-
-// function renderList(list){
-//   let board = document.querySelector(".theBoard")
-//   let listDiv = document.createElement('div')
-//   listDiv.classList.add('theList')
-//   listDiv.id = list.id
-//
-//   let h6 = document.createElement('h6')
-//   h6.textContent = list.name
-//
-//   //add button to delete list
-//   let btn = document.createElement('button')
-//   btn.textContent = 'delete list'
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     deleteList(list)
-//     listDiv.remove()
-//   })
-//
-//   let ul = document.createElement('ul')
-//   ul.id = `list ${list.id}`
-//
-//   h6.appendChild(btn)
-//   listDiv.append(h6, ul)
-//   board.append(listDiv)
-//
-//
-// }
 
 function renderTask(task){
   let ul = document.getElementById(`list ${task.list_id}`)
@@ -162,6 +129,8 @@ function postList(newList) {
 }
 
 function postTask(div, taskName) {
+  let test = taskName
+  debugger
   fetch(TASKURL, {
     method: "POST",
     headers: {
