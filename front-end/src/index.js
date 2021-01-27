@@ -68,6 +68,7 @@ function renderList(list){
   //creating form for new tasks
   let taskForm = document.querySelector('.task_form')
   let newForm = taskForm.cloneNode(true);
+  newForm.classList.add('hidden')
 
   newForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -75,10 +76,25 @@ function renderList(list){
     postTask(listDiv, newTask)
   })
 
+  //button to show/hide form
+  let hideButton = document.createElement('button')
+  hideButton.innerText = 'add task'
+  hideButton.addEventListener('click', () => {
+    console.log('test')
+    if (newForm.classList.contains('hidden')){
+      newForm.classList.remove('hidden')
+      hideButton.innerText = 'hide form'
+    }
+    else {
+      newForm.classList.add('hidden')
+      hideButton.innerText = 'add task'
+    }
+  })
+
   //appending elements
 
   h6.appendChild(btn)
-  listDiv.append(h6, ul, newForm)
+  listDiv.append(h6, ul, newForm, hideButton)
   divColumn.append(listDiv)
   divRow.append(divColumn)
 
