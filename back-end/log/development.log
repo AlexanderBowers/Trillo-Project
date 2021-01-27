@@ -13777,3 +13777,875 @@ Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1372)
 
 
 >>>>>>> acefe571acfb315f891283cbfe78cc92522668c9
+Started GET "/boards" for ::1 at 2021-01-26 16:16:22 -0800
+Started GET "/boards" for 127.0.0.1 at 2021-01-26 16:16:22 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:16:22 -0800
+Started GET "/tasks" for 127.0.0.1 at 2021-01-26 16:16:22 -0800
+Started GET "/lists" for 127.0.0.1 at 2021-01-26 16:16:22 -0800
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/tasks" for ::1 at 2021-01-26 16:16:22 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+  [1m[36mBoard Load (0.8ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 100ms (Views: 10.5ms | ActiveRecord: 1.5ms | Allocations: 25908)
+
+
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  [1m[36mList Load (1.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 117ms (Views: 22.0ms | ActiveRecord: 3.2ms | Allocations: 31770)
+
+
+Completed 200 OK in 119ms (Views: 28.4ms | ActiveRecord: 1.3ms | Allocations: 32700)
+
+
+Completed 200 OK in 119ms (Views: 33.0ms | ActiveRecord: 1.3ms | Allocations: 32938)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:16:59 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:16:59 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1548)
+
+
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1999)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:16:59 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:04 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:06 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:07 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:08 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:08 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:10 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:17:14 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:18:33 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:18:33 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1496)
+
+
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1874)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:18:33 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started POST "/tasks" for ::1 at 2021-01-26 16:18:36 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "boards"[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "boards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "lists"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_alists_on_board_id" ON "alists" ("board_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "alists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "lists"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "lists"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0d3f677137"
+FOREIGN KEY ("board_id")
+  REFERENCES "boards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "alists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "alists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_list_id" ON "atasks" ("list_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b8df67b5"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210125225403)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210125225326),
+(20210125225339);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-27 00:18:50.887865"], ["updated_at", "2021-01-27 00:18:50.887865"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "2039f335c2ab4078d208eed40a422c34ace6243f"], ["created_at", "2021-01-27 00:18:50.894994"], ["updated_at", "2021-01-27 00:18:50.894994"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "boards"[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "boards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lists"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_alists_on_board_id" ON "alists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "lists"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0d3f677137"
+FOREIGN KEY ("board_id")
+  REFERENCES "boards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "alists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_list_id" ON "atasks" ("list_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b8df67b5"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210125225403)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210125225326),
+(20210125225339);
+
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-27 00:18:50.972581"], ["updated_at", "2021-01-27 00:18:50.972581"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-01-27 00:18:50.978702"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "2039f335c2ab4078d208eed40a422c34ace6243f"], ["created_at", "2021-01-27 00:18:50.985093"], ["updated_at", "2021-01-27 00:18:50.985093"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Create (0.6ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test_board"], ["created_at", "2021-01-27 00:18:51.013744"], ["updated_at", "2021-01-27 00:18:51.013744"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.9ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "myList"], ["board_id", 1], ["created_at", "2021-01-27 00:18:51.043815"], ["updated_at", "2021-01-27 00:18:51.043815"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testTask"], ["list_id", 1], ["created_at", "2021-01-27 00:18:51.053292"], ["updated_at", "2021-01-27 00:18:51.053292"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "task2"], ["list_id", 1], ["created_at", "2021-01-27 00:18:51.059467"], ["updated_at", "2021-01-27 00:18:51.059467"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.7ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "secondList"], ["board_id", 1], ["created_at", "2021-01-27 00:18:51.065477"], ["updated_at", "2021-01-27 00:18:51.065477"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "thirdTask"], ["list_id", 2], ["created_at", "2021-01-27 00:18:51.073026"], ["updated_at", "2021-01-27 00:18:51.073026"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lastTask"], ["list_id", 2], ["created_at", "2021-01-27 00:18:51.089493"], ["updated_at", "2021-01-27 00:18:51.089493"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "third list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:51.095117"], ["updated_at", "2021-01-27 00:18:51.095117"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fourth list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:51.100598"], ["updated_at", "2021-01-27 00:18:51.100598"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (1.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fifth list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:51.105969"], ["updated_at", "2021-01-27 00:18:51.105969"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 1]]
+  [1m[36mTask Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 2]]
+  [1m[36mList Destroy (0.1ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 2]]
+  [1m[36mTask Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 3]]
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  [1m[36mList Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 3]]
+  [1m[36mList Destroy (0.5ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 4]]
+  [1m[36mList Destroy (0.6ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 5]]
+  [1m[36mList Destroy (0.5ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test_board"], ["created_at", "2021-01-27 00:18:58.499371"], ["updated_at", "2021-01-27 00:18:58.499371"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "myList"], ["board_id", 1], ["created_at", "2021-01-27 00:18:58.505877"], ["updated_at", "2021-01-27 00:18:58.505877"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testTask"], ["list_id", 1], ["created_at", "2021-01-27 00:18:58.510940"], ["updated_at", "2021-01-27 00:18:58.510940"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "task2"], ["list_id", 1], ["created_at", "2021-01-27 00:18:58.516330"], ["updated_at", "2021-01-27 00:18:58.516330"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.9ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "secondList"], ["board_id", 1], ["created_at", "2021-01-27 00:18:58.523422"], ["updated_at", "2021-01-27 00:18:58.523422"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "thirdTask"], ["list_id", 2], ["created_at", "2021-01-27 00:18:58.529569"], ["updated_at", "2021-01-27 00:18:58.529569"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lastTask"], ["list_id", 2], ["created_at", "2021-01-27 00:18:58.534154"], ["updated_at", "2021-01-27 00:18:58.534154"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "third list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:58.540238"], ["updated_at", "2021-01-27 00:18:58.540238"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fourth list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:58.544755"], ["updated_at", "2021-01-27 00:18:58.544755"]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fifth list"], ["board_id", 1], ["created_at", "2021-01-27 00:18:58.560061"], ["updated_at", "2021-01-27 00:18:58.560061"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/boards" for ::1 at 2021-01-26 16:19:10 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:19:10 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 16:19:10 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 8.8ms | ActiveRecord: 0.9ms | Allocations: 9950)
+
+
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 3.7ms | Allocations: 8874)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:19:43 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:19:43 -0800
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Processing by BoardsController#index as */*
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 1414)
+
+
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1731)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:19:43 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:19:48 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:19:48 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1526)
+
+
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:19:48 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:23:49 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:23:49 -0800
+Processing by BoardsController#index as */*
+Started GET "/tasks" for ::1 at 2021-01-26 16:23:49 -0800
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 1382)
+
+
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 1836)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:24:56 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:24:56 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 16:24:56 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 815)
+
+
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1172)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:25:45 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:25:45 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1496)
+
+
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1864)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:25:45 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:27:03 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.8ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 983)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 16:27:03 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 16:27:03 -0800
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+Started GET "/boards" for ::1 at 2021-01-26 16:27:49 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:27:49 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 843)
+
+
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1218)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:27:49 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+=======
+^~~
+/mnt/c/Users/Alex/dev/flatiron/Trillo-Project/back-end/app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+>>>>>>> acefe571acfb315f891283c...
+^~):
+  
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+app/controllers/tasks_controller.rb:13: syntax error, unexpected <<
+app/controllers/tasks_controller.rb:15: syntax error, unexpected ===, expecting end
+app/controllers/tasks_controller.rb:17: syntax error, unexpected >>, expecting end
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/boards" for ::1 at 2021-01-26 16:29:33 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:29:33 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 16:29:33 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Processing by TasksController#index as */*
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.6ms | Allocations: 6745)
+
+
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 1.9ms | Allocations: 9455)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 1.4ms | Allocations: 5277)
+
+
+Started POST "/tasks" for ::1 at 2021-01-26 16:29:37 -0800
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"", "list_id"=>"3", "task"=>{"name"=>"", "list_id"=>"3"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["list_id", 3], ["created_at", "2021-01-27 00:29:37.704015"], ["updated_at", "2021-01-27 00:29:37.704015"]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 5389)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 16:36:49 -0800
+Started GET "/boards" for ::1 at 2021-01-26 16:36:49 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 16:36:49 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mBoard Load (1.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Processing by TasksController#index as */*
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 2.3ms | Allocations: 2512)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 1.8ms | Allocations: 3124)
+
+
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.0ms | Allocations: 2186)
+
+
