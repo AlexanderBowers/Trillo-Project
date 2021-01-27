@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
   fetchList();
   setTimeout(() => { fetchTasks()}, 3);
+  let listForm = document.querySelector('.list_form')
+  listForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let newList = e.target.childNodes[4].value
+    postList(newList)
+
+})
 });
 
 
@@ -143,11 +150,13 @@ function postList(newList) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(newList)
+    body: JSON.stringify({
+      'name': newList
+    })
   })
   .then (res => res.json())
-  .then (newList => renderList(newList))
-}
+  .then (list => renderList(list))
+ }
 
 function postTask(div, taskName) {
   fetch(TASKURL, {
