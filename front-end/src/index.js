@@ -63,9 +63,8 @@ function renderList(list){
   let btn = document.createElement('button')
   btn.textContent = 'delete list'
   btn.addEventListener('click', (e) => {
-    e.preventDefault()
     deleteList(list)
-    // listDiv.remove()
+    listDiv.remove()
   })
 
   //creating uL for tasks
@@ -131,10 +130,7 @@ function deleteList(list){
         method: 'DELETE',
     })
     .then(resp => resp.json())
-    .then (() => {
-      let listDiv = document.querySelector('.card')
-      listDiv.remove()
-    })
+
 }
 function deleteTask(task){
     fetch(`${BASEURL}/tasks/${task.id}`, {
