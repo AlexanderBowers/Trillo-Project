@@ -32,7 +32,7 @@ function fetchList() {
 function fetchTasks() {
     fetch(TASKURL)
     .then(resp => resp.json())
-    .then(tasks => tasks.forEach((task) => renderTask(task)))
+    .then(tasks => tasks.forEach((task) => {renderTask(task)}))
 }
 
 
@@ -45,10 +45,13 @@ function renderBoard(board) {
   div.append(h2)
 }
 
+
 function renderList(list){
-  let board = document.querySelector(".theBoard")
+  let divRow = document.querySelector(".row")
+  let divColumn = document.createElement('div')
   let listDiv = document.createElement('div')
-  listDiv.classList.add('theList')
+  divColumn.className = 'column'
+  listDiv.className = "card"
   listDiv.id = list.id
 
   let h6 = document.createElement('h6')
@@ -68,26 +71,55 @@ function renderList(list){
 
   h6.appendChild(btn)
   listDiv.append(h6, ul)
-  board.append(listDiv)
+  divColumn.append(listDiv)
+  divRow.append(divColumn)
+
 
 }
+
+// function renderList(list){
+//   let board = document.querySelector(".theBoard")
+//   let listDiv = document.createElement('div')
+//   listDiv.classList.add('theList')
+//   listDiv.id = list.id
+//
+//   let h6 = document.createElement('h6')
+//   h6.textContent = list.name
+//
+//   //add button to delete list
+//   let btn = document.createElement('button')
+//   btn.textContent = 'delete list'
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     deleteList(list)
+//     listDiv.remove()
+//   })
+//
+//   let ul = document.createElement('ul')
+//   ul.id = `list ${list.id}`
+//
+//   h6.appendChild(btn)
+//   listDiv.append(h6, ul)
+//   board.append(listDiv)
+//
+//
+// }
 
 function renderTask(task){
   let ul = document.getElementById(`list ${task.list_id}`)
   let li = document.createElement('li')
   li.textContent = task.name
-
   //add button to delete li
   let btn = document.createElement('button')
   btn.textContent = 'X'
   btn.addEventListener('click', (e) => {
-      e.preventDefault()
+
       deleteTask(task)
       li.remove()
     })
 
-  li.appendChild(btn)
-  ul.appendChild(li)
+  ul.append(li)
+  li.append(btn)
 }
 
 //delete functions
