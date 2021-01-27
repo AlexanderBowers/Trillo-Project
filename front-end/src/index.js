@@ -56,9 +56,7 @@ function renderList(list){
   let btn = document.createElement('button')
   btn.textContent = 'delete list'
   btn.addEventListener('click', (e) => {
-    e.preventDefault()
     deleteList(list)
-    listDiv.remove()
   })
 
   //creating uL for tasks
@@ -106,12 +104,18 @@ function renderTask(task){
 function deleteList(list){
     fetch(`${BASEURL}/lists/${list.id}`, {
         method: 'DELETE',
-    }).then(resp => resp.json())
+    })
+    .then(resp => resp.json())
+    .then (() => {
+      let listDiv = document.querySelector('.card')
+      listDiv.remove()
+    })
 }
 function deleteTask(task){
     fetch(`${BASEURL}/tasks/${task.id}`, {
         method: 'DELETE',
-    }).then(resp => resp.json())
+    })
+    .then(resp => resp.json())
 }
 
 // Post functions

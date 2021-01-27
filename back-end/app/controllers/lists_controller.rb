@@ -5,7 +5,7 @@ class ListsController < ApplicationController
     end
 
     def show
-        list = List.find_by(id: params["id"])
+        list = List.find_by(id: params[:id])
         render json: list
     end
 
@@ -15,7 +15,7 @@ class ListsController < ApplicationController
     end
 
     def destroy
-        list = List.find_by(id: params["id"])
+        list = List.find_by(id: params[:id])
         list.destroy()
         render json: list
     end
