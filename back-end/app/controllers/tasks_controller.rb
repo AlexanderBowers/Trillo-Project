@@ -10,7 +10,11 @@ class TasksController < ApplicationController
     end
 
     def create
+<<<<<<< HEAD
         task = Task.create(name: params[:name], list_id: params["list_id"])
+=======
+        task = Task.create(name: params[:name], list_id: params[:list_id])
+>>>>>>> acefe571acfb315f891283cbfe78cc92522668c9
         render json: task
     end
 
