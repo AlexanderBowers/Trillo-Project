@@ -14649,3 +14649,960 @@ Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 1.8ms | Allocations: 312
 Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.0ms | Allocations: 2186)
 
 
+Started GET "/tasks" for ::1 at 2021-01-26 16:51:51 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:51:51 -0800
+Started GET "/boards" for ::1 at 2021-01-26 16:51:51 -0800
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 7.9ms | ActiveRecord: 1.4ms | Allocations: 12976)
+
+
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Completed 200 OK in 44ms (Views: 12.3ms | ActiveRecord: 1.5ms | Allocations: 17071)
+
+
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 20.7ms | ActiveRecord: 1.8ms | Allocations: 20069)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:51:51 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:51:51 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1874)
+
+
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1890)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:51:51 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1164)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:52:49 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:52:49 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Processing by ListsController#index as */*
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1145)
+
+
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1446)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:52:49 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1163)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:54:24 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:54:24 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 1851)
+
+
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1965)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:54:24 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:54:40 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:54:40 -0800
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Processing by BoardsController#index as */*
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 1622)
+
+
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1647)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:54:40 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:58:16 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:58:16 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Processing by ListsController#index as */*
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1286)
+
+
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1659)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:58:16 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 16:58:24 -0800
+Started GET "/boards" for ::1 at 2021-01-26 16:58:24 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1675)
+
+
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 2153)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:58:24 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1148)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 16:58:40 -0800
+Started GET "/boards" for ::1 at 2021-01-26 16:58:40 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 925)
+
+
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Started GET "/tasks" for ::1 at 2021-01-26 16:58:40 -0800
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1385)
+
+
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 16:59:27 -0800
+Started GET "/lists" for ::1 at 2021-01-26 16:59:27 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1742)
+
+
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1863)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:59:27 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 16:59:54 -0800
+Started GET "/boards" for ::1 at 2021-01-26 16:59:54 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1855)
+
+
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 1979)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 16:59:54 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:00:28 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:00:28 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1518)
+
+
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1991)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:00:28 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:21:43 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:21:43 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 2705)
+
+
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3249)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:21:43 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1163)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:22:09 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:22:09 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1555)
+
+
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 2029)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:22:09 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1163)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:23:12 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:23:12 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 1842)
+
+
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1865)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:23:12 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started POST "/tasks" for ::1 at 2021-01-26 17:23:17 -0800
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"undefined", "list_id"=>"2", "task"=>{"name"=>"undefined", "list_id"=>"2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Create (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "undefined"], ["list_id", 2], ["created_at", "2021-01-27 01:23:17.138029"], ["updated_at", "2021-01-27 01:23:17.138029"]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 9989)
+
+
+Started DELETE "/tasks/6" for ::1 at 2021-01-26 17:23:40 -0800
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTask Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.9ms | Allocations: 2997)
+
+
+Started POST "/tasks" for ::1 at 2021-01-26 17:23:44 -0800
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"undefined", "list_id"=>"2", "task"=>{"name"=>"undefined", "list_id"=>"2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Create (1.1ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "undefined"], ["list_id", 2], ["created_at", "2021-01-27 01:23:44.050479"], ["updated_at", "2021-01-27 01:23:44.050479"]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 3501)
+
+
+Started DELETE "/tasks/6" for ::1 at 2021-01-26 17:23:45 -0800
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTask Destroy (1.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 2558)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:23:46 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:23:46 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1362)
+
+
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1845)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:23:46 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started POST "/tasks" for ::1 at 2021-01-26 17:23:50 -0800
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"hi", "list_id"=>"2", "task"=>{"name"=>"hi", "list_id"=>"2"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Create (1.1ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hi"], ["list_id", 2], ["created_at", "2021-01-27 01:23:50.184108"], ["updated_at", "2021-01-27 01:23:50.184108"]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3554)
+
+
+Started DELETE "/tasks/6" for ::1 at 2021-01-26 17:26:36 -0800
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTask Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 2866)
+
+
+Started DELETE "/tasks/4" for ::1 at 2021-01-26 17:26:37 -0800
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTask Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 2852)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "boards"[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "boards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "lists"[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_alists_on_board_id" ON "alists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "lists"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0d3f677137"
+FOREIGN KEY ("board_id")
+  REFERENCES "boards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "alists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_list_id" ON "atasks" ("list_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b8df67b5"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210125225403)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210125225326),
+(20210125225339);
+
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-27 01:26:50.313877"], ["updated_at", "2021-01-27 01:26:50.313877"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "2039f335c2ab4078d208eed40a422c34ace6243f"], ["created_at", "2021-01-27 01:26:50.320638"], ["updated_at", "2021-01-27 01:26:50.320638"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "boards"[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "boards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "lists"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_alists_on_board_id" ON "alists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "lists"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "board_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0d3f677137"
+FOREIGN KEY ("board_id")
+  REFERENCES "boards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_lists_on_board_id" ON "lists" ("board_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "lists" ("id","name","board_id","created_at","updated_at")
+                     SELECT "id","name","board_id","created_at","updated_at" FROM "alists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alists"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atasks_on_list_id" ON "atasks" ("list_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b8df67b5"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_tasks_on_list_id" ON "tasks" ("list_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","list_id","created_at","updated_at")
+                     SELECT "id","name","list_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210125225403)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210125225326),
+(20210125225339);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-27 01:26:50.386909"], ["updated_at", "2021-01-27 01:26:50.386909"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-01-27 01:26:50.391365"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "2039f335c2ab4078d208eed40a422c34ace6243f"], ["created_at", "2021-01-27 01:26:50.395978"], ["updated_at", "2021-01-27 01:26:50.395978"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test_board"], ["created_at", "2021-01-27 01:26:50.419699"], ["updated_at", "2021-01-27 01:26:50.419699"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "myList"], ["board_id", 1], ["created_at", "2021-01-27 01:26:50.431346"], ["updated_at", "2021-01-27 01:26:50.431346"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testTask"], ["list_id", 1], ["created_at", "2021-01-27 01:26:50.439182"], ["updated_at", "2021-01-27 01:26:50.439182"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "task2"], ["list_id", 1], ["created_at", "2021-01-27 01:26:50.443936"], ["updated_at", "2021-01-27 01:26:50.443936"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "secondList"], ["board_id", 1], ["created_at", "2021-01-27 01:26:50.448367"], ["updated_at", "2021-01-27 01:26:50.448367"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "thirdTask"], ["list_id", 2], ["created_at", "2021-01-27 01:26:50.453020"], ["updated_at", "2021-01-27 01:26:50.453020"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lastTask"], ["list_id", 2], ["created_at", "2021-01-27 01:26:50.457704"], ["updated_at", "2021-01-27 01:26:50.457704"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "third list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:50.462309"], ["updated_at", "2021-01-27 01:26:50.462309"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fourth list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:50.466689"], ["updated_at", "2021-01-27 01:26:50.466689"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fifth list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:50.471208"], ["updated_at", "2021-01-27 01:26:50.471208"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 1]]
+  [1m[36mTask Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 2]]
+  [1m[36mList Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 2]]
+  [1m[36mTask Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 3]]
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  [1m[36mList Destroy (0.1ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 3]]
+  [1m[36mList Destroy (1.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 4]]
+  [1m[36mList Destroy (0.6ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = ?[0m  [["list_id", 5]]
+  [1m[36mList Destroy (0.6ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Create (0.7ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test_board"], ["created_at", "2021-01-27 01:26:55.276720"], ["updated_at", "2021-01-27 01:26:55.276720"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "myList"], ["board_id", 1], ["created_at", "2021-01-27 01:26:55.283221"], ["updated_at", "2021-01-27 01:26:55.283221"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testTask"], ["list_id", 1], ["created_at", "2021-01-27 01:26:55.289054"], ["updated_at", "2021-01-27 01:26:55.289054"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "task2"], ["list_id", 1], ["created_at", "2021-01-27 01:26:55.294481"], ["updated_at", "2021-01-27 01:26:55.294481"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.7ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "secondList"], ["board_id", 1], ["created_at", "2021-01-27 01:26:55.299561"], ["updated_at", "2021-01-27 01:26:55.299561"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "thirdTask"], ["list_id", 2], ["created_at", "2021-01-27 01:26:55.304749"], ["updated_at", "2021-01-27 01:26:55.304749"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lastTask"], ["list_id", 2], ["created_at", "2021-01-27 01:26:55.309677"], ["updated_at", "2021-01-27 01:26:55.309677"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "third list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:55.314754"], ["updated_at", "2021-01-27 01:26:55.314754"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fourth list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:55.319797"], ["updated_at", "2021-01-27 01:26:55.319797"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mList Create (0.5ms)[0m  [1m[32mINSERT INTO "lists" ("name", "board_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fifth list"], ["board_id", 1], ["created_at", "2021-01-27 01:26:55.324428"], ["updated_at", "2021-01-27 01:26:55.324428"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/boards" for ::1 at 2021-01-26 17:27:07 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 17:27:07 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:27:07 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 1.1ms | Allocations: 8952)
+
+
+Processing by TasksController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 4.4ms | Allocations: 10437)
+
+
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 29.5ms | ActiveRecord: 3.5ms | Allocations: 8969)
+
+
+Started POST "/tasks" for ::1 at 2021-01-26 17:27:13 -0800
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"testing", "list_id"=>"3", "task"=>{"name"=>"testing", "list_id"=>"3"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Create (2.0ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testing"], ["list_id", 3], ["created_at", "2021-01-27 01:27:13.407445"], ["updated_at", "2021-01-27 01:27:13.407445"]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 5.5ms | Allocations: 5417)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:27:56 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:27:56 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 17:27:56 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 835)
+
+
+Processing by TasksController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1718)
+
+
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 2179)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:02 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:02 -0800
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 2033)
+
+
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1453)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:02 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:04 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:04 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (1.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 1882)
+
+
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.2ms | Allocations: 1975)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:04 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1163)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:05 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:05 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1518)
+
+
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1973)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:05 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:05 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:05 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1508)
+
+
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 1977)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:05 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:06 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:06 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Processing by ListsController#index as */*
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1272)
+
+
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1650)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:06 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:06 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:06 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1518)
+
+
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 1947)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:06 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.1ms | Allocations: 1148)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 17:28:07 -0800
+Started GET "/boards" for ::1 at 2021-01-26 17:28:07 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1847)
+
+
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 1867)
+
+
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:07 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:07 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:07 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Processing by ListsController#index as */*
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:07 -0800
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1315)
+
+
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1631)
+
+
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/boards" for ::1 at 2021-01-26 17:28:08 -0800
+Started GET "/lists" for ::1 at 2021-01-26 17:28:08 -0800
+Started GET "/tasks" for ::1 at 2021-01-26 17:28:08 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+Processing by ListsController#index as */*
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Processing by TasksController#index as */*
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 1315)
+
+
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1802)
+
+
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 3041)
+
+
+Started GET "/lists" for ::1 at 2021-01-26 17:29:26 -0800
+Started GET "/boards" for ::1 at 2021-01-26 17:29:26 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+Started GET "/tasks" for ::1 at 2021-01-26 17:29:26 -0800
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1579)
+
+
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 2184)
+
+
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1148)
+
+
