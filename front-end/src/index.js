@@ -58,7 +58,7 @@ function renderList(list){
   btn.addEventListener('click', (e) => {
     e.preventDefault()
     deleteList(list)
-    listDiv.remove()
+    // listDiv.remove()
   })
 
   //creating uL for tasks
@@ -80,7 +80,6 @@ function renderList(list){
   let hideButton = document.createElement('button')
   hideButton.innerText = 'add task'
   hideButton.addEventListener('click', () => {
-    console.log('test')
     if (newForm.classList.contains('hidden')){
       newForm.classList.remove('hidden')
       hideButton.innerText = 'hide form'
@@ -105,11 +104,12 @@ function renderTask(task){
   let ul = document.getElementById(`list ${task.list_id}`)
   let li = document.createElement('li')
   li.textContent = task.name
+  li.className = "list-li"
   //add button to delete li
   let btn = document.createElement('button')
   btn.textContent = 'X'
   btn.addEventListener('click', (e) => {
-
+      e.preventDefault()
       deleteTask(task)
       li.remove()
     })
@@ -122,12 +122,18 @@ function renderTask(task){
 function deleteList(list){
     fetch(`${BASEURL}/lists/${list.id}`, {
         method: 'DELETE',
-    }).then(resp => resp.json())
+    })
+    .then(resp => resp.json())
+    .then (() => {
+      let listDiv = document.querySelector('.card')
+      listDiv.remove()
+    })
 }
 function deleteTask(task){
     fetch(`${BASEURL}/tasks/${task.id}`, {
         method: 'DELETE',
-    }).then(resp => resp.json())
+    })
+    .then(resp => resp.json())
 }
 
 // Post functions
@@ -173,4 +179,5 @@ function handleSubmitTask(e){
     name: e.target['task-name'].value
   }
   postTask(newTask)
+  // e.target.reset()
 }
