@@ -19540,3 +19540,262 @@ Processing by TasksController#index as */*
 Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1036)
 
 
+Started GET "/boards" for ::1 at 2021-01-27 11:01:51 -0800
+Started GET "/tasks" for ::1 at 2021-01-27 11:01:51 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:01:51 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+Processing by TasksController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 1.8ms | Allocations: 10015)
+
+
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 3.4ms | Allocations: 9339)
+
+
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 1.8ms | Allocations: 14057)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:01:56 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:01:56 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1560)
+
+
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1803)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:01:56 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1036)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:01:57 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:01:57 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1506)
+
+
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1642)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:01:57 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1051)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:04:53 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:04:53 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1501)
+
+
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1639)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:04:53 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1036)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:08:43 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:08:43 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1630)
+
+
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1762)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:08:43 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1036)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:10:33 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:10:33 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1485)
+
+
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1636)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:10:33 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1036)
+
+
+Started GET "/lists" for ::1 at 2021-01-27 11:10:59 -0800
+Started GET "/boards" for ::1 at 2021-01-27 11:10:59 -0800
+Processing by BoardsController#index as */*
+Processing by ListsController#index as */*
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1514)
+
+
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1744)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:10:59 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1036)
+
+
+Started GET "/boards" for ::1 at 2021-01-27 11:11:16 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:11:16 -0800
+Processing by ListsController#index as */*
+Processing by BoardsController#index as */*
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 1611)
+
+
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1752)
+
+
+Started GET "/tasks" for ::1 at 2021-01-27 11:11:16 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1036)
+
+
+Started POST "/boards" for ::1 at 2021-01-27 11:11:18 -0800
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for BoardsController):
+  
+actionpack (6.1.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.1.1) lib/puma/configuration.rb:246:in `call'
+puma (5.1.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.1.1) lib/puma/server.rb:431:in `process_client'
+puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/boards" for ::1 at 2021-01-27 11:13:58 -0800
+Started GET "/lists" for ::1 at 2021-01-27 11:13:58 -0800
+Started GET "/tasks" for ::1 at 2021-01-27 11:13:58 -0800
+Processing by ListsController#index as */*
+Processing by TasksController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 2.9ms | Allocations: 7396)
+
+
+Processing by BoardsController#index as */*
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 2.2ms | Allocations: 9386)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+  [1m[36mBoard Load (1.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 5.3ms | Allocations: 4632)
+
+
+Started POST "/boards" for ::1 at 2021-01-27 11:14:00 -0800
+Processing by BoardsController#create as */*
+  Parameters: {"name"=>"test", "board"=>{"name"=>"test"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/boards_controller.rb:13:in `create'
+  [1m[36mBoard Create (1.2ms)[0m  [1m[32mINSERT INTO "boards" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2021-01-27 19:14:00.776550"], ["updated_at", "2021-01-27 19:14:00.776550"]]
+  ↳ app/controllers/boards_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/boards_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 2978)
+
+

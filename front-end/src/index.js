@@ -11,10 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
   listForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let newList = e.target.childNodes[4].value
-    postList(newList)
+    postList(newList)})
 
+    let boardForm = document.querySelector('.board_form')
+    boardForm.addEventListener("submit", (e) => {
+      e.preventDefault()
+      let newBoard = e.target.childNodes[4].value
+      postBoard(newBoard)
+      })
 })
-});
 
 
 
@@ -144,6 +149,19 @@ function deleteTask(task){
 }
 
 // Post functions
+function postBoard(newBoard) {
+  fetch(BOARDURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      'name': newBoard
+    })
+  })
+  .then (res => res.json())
+  .then (console.log)
+ }
 function postList(newList) {
   fetch(LISTURL, {
     method: "POST",
