@@ -10,7 +10,7 @@ class ListsController < ApplicationController
     end
 
     def create
-        list = List.create(name: params[:name], board_id: 1)
+        list = List.create(name: params[:name], board_id: params[:board_id])
         render json: list
     end
 

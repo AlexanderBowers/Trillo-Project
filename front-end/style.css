@@ -61,6 +61,14 @@ p {
   display: none;
 }
 
+.inactiveBoard {
+  display: none;
+}
+
+.activeBoard{
+  background-color: #555555;
+}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
