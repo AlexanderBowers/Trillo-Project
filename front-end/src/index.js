@@ -4,15 +4,8 @@ const LISTURL = `${BASEURL}/lists`
 const TASKURL = `${BASEURL}/tasks`
 document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
-  setTimeout(() => { fetchList()}, 3000);
-  setTimeout(() => { fetchTasks()}, 5000);
-
-  let listForm = document.querySelector('.list_form')
-    listForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    let newList = e.target.childNodes[4].value
-    postList(newList)})
-
+  setTimeout(() => { fetchList()}, 30);
+  setTimeout(() => { fetchTasks()}, 50);
     let boardForm = document.querySelector('.board_form')
       boardForm.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -54,13 +47,28 @@ function renderBoard(board) {
    let boardDiv = document.createElement('div')
    boardDiv.id = `board ${board.id}`
    boardDiv.classList.add('hidden')
-   
+
+  //adding list form to the board so users can create new lists.
+  let listForm = document.querySelector('.list_form')
+  let newListForm = listForm.cloneNode(true);
+    newListForm.classList.remove('hidden')
+    boardDiv.append(newListForm)
+    newListForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let newList = e.target.childNodes[4].value
+    postList(newList, boardDiv)})
+    
+  
+
+
+  //button to display the board
   let boardButton = document.createElement('button')
   boardButton.innerText = board.name
   body.append(boardButton, boardDiv)
+
+  //display the board when clicked
   boardButton.addEventListener('click', () =>{
-    let activeBoard = document.querySelector('.activeBoard')
-   
+  let activeBoard = document.querySelector('.activeBoard')
     //checks to see if activeRecord is null, the same as divBoard, or a different divBoard
     if (activeBoard == null)
     {
@@ -113,7 +121,6 @@ function renderList(list){
       let h6 = document.createElement('h6')
       h6.textContent = list.name
 
-<<<<<<< HEAD
       //add button to delete list
       let btn = document.createElement('button')
       btn.textContent = 'delete list'
@@ -122,15 +129,6 @@ function renderList(list){
         deleteList(list)
         // listDiv.remove()
       })
-=======
-  //add button to delete list
-  let btn = document.createElement('button')
-  btn.textContent = 'delete list'
-  btn.addEventListener('click', (e) => {
-    deleteList(list)
-    listDiv.remove()
-  })
->>>>>>> 9418d098232036bdcd7688626a594ca932de9b30
 
       //creating uL for tasks
       let ul = document.createElement('ul')
@@ -189,6 +187,8 @@ function renderTask(task){
 
 //delete functions
 function deleteList(list){
+    let element = document.getElementById(list.id)
+    element.parentNode.remove()
     fetch(`${BASEURL}/lists/${list.id}`, {
         method: 'DELETE',
     })
@@ -216,18 +216,24 @@ function postBoard(newBoard) {
   .then (res => res.json())
   .then (board => renderBoard(board))
  }
-function postList(newList) {
+function postList(newList, boardDiv) {
   fetch(LISTURL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      'name': newList
+      'name': newList,
+      'board_id': `${boardDiv.id[6]}`
     })
   })
   .then (res => res.json())
-  .then (list => renderList(list))
+  .then (list => {
+    renderList(list)
+    let newList = document.getElementById(`${list.id}`)
+    newList.parentElement.classList.remove('hidden')
+
+  })
  }
 
 function postTask(div, taskName) {
@@ -262,8 +268,3 @@ function handleSubmitTask(e){
   postTask(newTask)
   // e.target.reset()
 }
-
-function showLists(board){
-   
-}
-
