@@ -76,3 +76,10 @@ p {
     margin-bottom: 20px;
   }
 }
+
+
+body {
+  background: #232425;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
