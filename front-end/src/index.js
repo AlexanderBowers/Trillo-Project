@@ -113,6 +113,7 @@ function renderList(list){
       let h6 = document.createElement('h6')
       h6.textContent = list.name
 
+<<<<<<< HEAD
       //add button to delete list
       let btn = document.createElement('button')
       btn.textContent = 'delete list'
@@ -121,6 +122,15 @@ function renderList(list){
         deleteList(list)
         // listDiv.remove()
       })
+=======
+  //add button to delete list
+  let btn = document.createElement('button')
+  btn.textContent = 'delete list'
+  btn.addEventListener('click', (e) => {
+    deleteList(list)
+    listDiv.remove()
+  })
+>>>>>>> 9418d098232036bdcd7688626a594ca932de9b30
 
       //creating uL for tasks
       let ul = document.createElement('ul')
@@ -183,10 +193,7 @@ function deleteList(list){
         method: 'DELETE',
     })
     .then(resp => resp.json())
-    .then (() => {
-      let listDiv = document.querySelector('.card')
-      listDiv.remove()
-    })
+
 }
 function deleteTask(task){
     fetch(`${BASEURL}/tasks/${task.id}`, {
