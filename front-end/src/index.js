@@ -52,19 +52,19 @@ function renderBoard(board) {
    let body = document.querySelector('body')
    let boardDiv = document.createElement('div')
    boardDiv.id = board.id
-   //render the lists for each board
    
-  
   let boardButton = document.createElement('button')
   boardButton.innerText = board.name
   boardButton.id = board.id
   body.append(boardButton, boardDiv)
 
-  //does not work
+  //---------------------------------------------------------------Matt Look here------------------------------------------------------
 
-  // for(const list of listsArray){
-  //   renderList(list, boardDiv)
-  // }
+  //in order to get this to work, when the page loads, quickly click board 1, close board 1 by clicking it again, then click board 2.
+  //The reason for this is because the tasks don't render in the lists unless you click on the div at least once.
+  //Currently renderList is set to load when activeBoard is null. Clicking on a board gives it the class of activeBoard.
+  //Clicking on the same board will remove the board and hide it. Clicking a different board will remove the activeBoard class and apply it to the board you clicked on.
+
   boardButton.addEventListener('click', () =>{
     let activeBoard = document.querySelector('.activeBoard')
 
