@@ -2,23 +2,22 @@ const BASEURL = 'http://localhost:3000'
 const BOARDURL = `${BASEURL}/boards`
 const LISTURL = `${BASEURL}/lists`
 const TASKURL = `${BASEURL}/tasks`
-let listsArray = []
-
 document.addEventListener("DOMContentLoaded", () => {
   fetchBoards();
-  fetchList();
-  setTimeout(() => { fetchTasks()}, 3000);
+  setTimeout(() => { fetchList()}, 3000);
+  setTimeout(() => { fetchTasks()}, 5000);
+
   let listForm = document.querySelector('.list_form')
-  listForm.addEventListener("submit", (e) => {
+    listForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let newList = e.target.childNodes[4].value
     postList(newList)})
 
     let boardForm = document.querySelector('.board_form')
-    boardForm.addEventListener("submit", (e) => {
-      e.preventDefault()
-      let newBoard = e.target.childNodes[4].value
-      postBoard(newBoard)
+      boardForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+        let newBoard = e.target.childNodes[4].value
+        postBoard(newBoard)
       })
 })
 
@@ -28,18 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // fetch functions
 function fetchBoards() {
+  console.log('boards have started')
   fetch(BOARDURL)
   .then (res => res.json()).then(boards => boards.forEach(board => renderBoard(board))).then(console.log('boards are done'))
 }
 
 function fetchList() {
-  
+  console.log('lists have started')
   fetch(`${BASEURL}/lists`)
-  .then (res => res.json())
-  .then (lists => lists.forEach((list) => listsArray.push(list))).then(console.log('lists are done'))
+  .then (res => res.json()).then(lists => lists.forEach(list => renderList(list))).then(console.log('lists are done'))
 }
+  
 
 function fetchTasks() {
+  console.log('tasks have started')
     fetch(TASKURL)
     .then(resp => resp.json())
     .then(tasks => tasks.forEach((task) => {renderTask(task)})).then(console.log('tasks are done'))
@@ -51,62 +52,62 @@ function fetchTasks() {
 function renderBoard(board) {
    let body = document.querySelector('body')
    let boardDiv = document.createElement('div')
-   boardDiv.id = board.id
+   boardDiv.id = `board ${board.id}`
+   boardDiv.classList.add('hidden')
    
   let boardButton = document.createElement('button')
   boardButton.innerText = board.name
-  boardButton.id = board.id
   body.append(boardButton, boardDiv)
-
-  //---------------------------------------------------------------Matt Look here------------------------------------------------------
-
-  //in order to get this to work, when the page loads, quickly click board 1, close board 1 by clicking it again, then click board 2.
-  //The reason for this is because the tasks don't render in the lists unless you click on the div at least once.
-  //Currently renderList is set to load when activeBoard is null. Clicking on a board gives it the class of activeBoard.
-  //Clicking on the same board will remove the board and hide it. Clicking a different board will remove the activeBoard class and apply it to the board you clicked on.
-
   boardButton.addEventListener('click', () =>{
     let activeBoard = document.querySelector('.activeBoard')
-
+   
     //checks to see if activeRecord is null, the same as divBoard, or a different divBoard
     if (activeBoard == null)
     {
       boardDiv.classList.add('activeBoard')
       boardDiv.classList.remove('hidden')
       console.log('activeBoard was null')
-      //works but duplicates the lists if called previously
-      for(const list of listsArray){
-        renderList(list, boardDiv)
-      }
+      console.log(`child nodes are ${boardDiv.childNodes}`)
+      boardDiv.childNodes.forEach(child => {
+        child.classList.remove('hidden')
+      })
+      
       }
     else if (activeBoard.id == boardDiv.id ) {
       boardDiv.classList.remove('activeBoard')
       boardDiv.classList.add('hidden')
       console.log('activeBoard was the same as boardDiv')
-
+      boardDiv.childNodes.forEach(child => {
+        child.classList.add('hidden')
+      })
     }
     else if (activeBoard.id != boardDiv.id){
       activeBoard.classList.add('hidden')
       activeBoard.classList.remove('activeBoard')
       boardDiv.classList.remove('hidden')
       boardDiv.classList.add('activeBoard')
-      console.log('activeBoard was a different boardDiv')
-      
+      console.log('activeBoard was a different boardDiv') 
+      activeBoard.childNodes.forEach(child => {
+        child.classList.add('hidden')
+      })
+      boardDiv.childNodes.forEach(child => {
+        child.classList.remove('hidden')
+      })
     }
     
   })
   
+  
 }
 
-function renderList(list, boardDiv){
-    if (boardDiv.id == list.board_id){
-      
+function renderList(list){
+    let parentDiv = document.getElementById(`board ${list.board_id}`)
       let divRow = document.createElement("div")
       divRow.classList.add('.row')
-      let divColumn = document.createElement('div')
       let listDiv = document.createElement('div')
-      divColumn.className = 'column'
-      listDiv.className = "card"
+      listDiv.classList.add('column', 'card')
+       //divColumn.className = 'column'
+      // listDiv.className = "card"
       listDiv.id = list.id
 
       let h6 = document.createElement('h6')
@@ -154,12 +155,10 @@ function renderList(list, boardDiv){
 
       h6.appendChild(btn)
       listDiv.append(h6, ul, newForm, hideButton)
-      divColumn.append(listDiv)
-      divRow.append(divColumn)
-      boardDiv.append(divRow)
-      
+      divRow.append(listDiv)
+      divRow.classList.add('hidden')
+      parentDiv.append(divRow)
     }
-}
 
 function renderTask(task){
   let ul = document.getElementById(`list ${task.list_id}`)
@@ -174,7 +173,6 @@ function renderTask(task){
       deleteTask(task)
       li.remove()
     })
-
   ul.append(li)
   li.append(btn)
 }
