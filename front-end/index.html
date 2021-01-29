@@ -2,21 +2,25 @@
 <html>
     <head>
         <title>trILLo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel='stylesheet' href='style.css'>
     </head>
     <body>
+      <header>
+
+      </header>
       <form class='board_form'>
-        <label for='board-name'>Board Name: </label><br />
-        <input type='text' id='board-name' name="board-name" />
-        <input type="submit"/>
+        <label for='board-name'> </label><br />
+        <input type='text' id='board-name' name="board-name" placeholder="Input Board Name:" />
+        <input type="submit" class="btn btn-primary btn-sm" value="+" />
       </form>
       <div class= 'theBoard'>
         <div class= 'row' >
           <div class='theList'>
              <form class='list_form hidden'>
-               <label for='list-name'>List Name: </label><br />
-               <input type='text' id='list-name' name="list-name" />
-               <input type="submit"/>
+               <label for='list-name'></label><br />
+               <input type='text' id='list-name' name="list-name" placeholder="Input List Name:"/>
+               <input type="submit" value="+" class= 'btn btn-primary btn-sm'/>
              </form>
              <form class='task_form hidden'>
                <label for="task-name">Task Name: </label><br />
@@ -27,5 +31,6 @@
         </div>
       </div>
         <script src='./src/index.js'></script>
+
     </body>
 </html>

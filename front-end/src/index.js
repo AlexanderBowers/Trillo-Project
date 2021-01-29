@@ -30,7 +30,7 @@ function fetchList() {
   fetch(`${BASEURL}/lists`)
   .then (res => res.json()).then(lists => lists.forEach(list => renderList(list))).then(console.log('lists are done'))
 }
-  
+
 
 function fetchTasks() {
   console.log('tasks have started')
@@ -43,7 +43,7 @@ function fetchTasks() {
 
 // render functions
 function renderBoard(board) {
-   let body = document.querySelector('body')
+   let body = document.querySelector('header')
    let boardDiv = document.createElement('div')
    boardDiv.id = `board ${board.id}`
    boardDiv.classList.add('hidden')
@@ -57,8 +57,8 @@ function renderBoard(board) {
     e.preventDefault()
     let newList = e.target.childNodes[4].value
     postList(newList, boardDiv)})
-    
-  
+
+
 
 
   //button to display the board
@@ -79,7 +79,7 @@ function renderBoard(board) {
       boardDiv.childNodes.forEach(child => {
         child.classList.remove('hidden')
       })
-      
+
       }
     else if (activeBoard.id == boardDiv.id ) {
       boardDiv.classList.remove('activeBoard')
@@ -94,7 +94,7 @@ function renderBoard(board) {
       activeBoard.classList.remove('activeBoard')
       boardDiv.classList.remove('hidden')
       boardDiv.classList.add('activeBoard')
-      console.log('activeBoard was a different boardDiv') 
+      console.log('activeBoard was a different boardDiv')
       activeBoard.childNodes.forEach(child => {
         child.classList.add('hidden')
       })
@@ -102,14 +102,15 @@ function renderBoard(board) {
         child.classList.remove('hidden')
       })
     }
-    
+
   })
-  
-  
+
+
 }
 
 function renderList(list){
-    let parentDiv = document.getElementById(`board ${list.board_id}`)
+    let parentDiv = document.querySelector('.container')
+    //let parentDiv = document.getElementById(`board ${list.board_id}`)
       let divRow = document.createElement("div")
       divRow.classList.add('.row')
       let listDiv = document.createElement('div')
@@ -175,7 +176,7 @@ function renderTask(task){
   li.className = "list-li"
   //add button to delete li
   let btn = document.createElement('button')
-  btn.textContent = 'X'
+  btn.textContent = 'x'
   btn.addEventListener('click', (e) => {
       e.preventDefault()
       deleteTask(task)

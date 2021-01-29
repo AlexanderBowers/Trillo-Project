@@ -50,7 +50,7 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #a80000;
 }
 
 .card:hover {
@@ -75,4 +75,19 @@ p {
     display: block;
     margin-bottom: 20px;
   }
+}
+
+
+body {
+  background: #232425;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-primary {
+  color: white;
+  /* background: green; */
+}
+
+.header {
+  background-color: blue; 
 }
