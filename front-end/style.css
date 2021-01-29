@@ -89,7 +89,7 @@ body {
 
 .btn-primary {
   color: white;
-  /* background: green; */
+  background: #FD0000;
 }
 
 .btn-primary:hover {
@@ -98,4 +98,13 @@ body {
 
 .header {
   background-color: blue;
+}
+
+.boardClass {
+  background: gray;
+  color: white; 
+}
+
+.boardClass:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }

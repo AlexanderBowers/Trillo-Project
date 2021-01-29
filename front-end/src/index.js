@@ -63,6 +63,7 @@ function renderBoard(board) {
 
   //button to display the board
   let boardButton = document.createElement('button')
+  boardButton.className ="boardClass"
   boardButton.innerText = board.name
   body.append(boardButton, boardDiv)
 
