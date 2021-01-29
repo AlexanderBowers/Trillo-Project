@@ -47,12 +47,12 @@ function renderBoard(board) {
    let boardDiv = document.createElement('div')
    boardDiv.id = `board ${board.id}`
    boardDiv.classList.add('hidden')
-
+   let parentDiv = document.querySelector('.theBoard')
   //adding list form to the board so users can create new lists.
   let listForm = document.querySelector('.list_form')
   let newListForm = listForm.cloneNode(true);
-    newListForm.classList.remove('hidden')
-    boardDiv.append(newListForm)
+    
+    parentDiv.append(newListForm)
     newListForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let newList = e.target.childNodes[4].value
@@ -63,20 +63,20 @@ function renderBoard(board) {
 
   //button to display the board
   let boardButton = document.createElement('button')
-  boardButton.className ="boardClass"
   boardButton.innerText = board.name
   body.append(boardButton, boardDiv)
 
-  //display the board when clicked
+  //display the board's lists when clicked
   boardButton.addEventListener('click', () =>{
   let activeBoard = document.querySelector('.activeBoard')
   let theLists = document.getElementsByClassName('.row')
+
     //checks to see if activeRecord is null, the same as divBoard, or a different divBoard
     if (activeBoard == null)
     {
+      newListForm.classList.remove('hidden')
       boardDiv.classList.add('activeBoard')
       boardDiv.classList.remove('hidden')
-      console.log('activeBoard was null')
       for (list of theLists) {
         if (list.classList.contains(`ofBoard${board.id}`)){
         list.classList.remove('hidden')
@@ -90,25 +90,27 @@ function renderBoard(board) {
     else if (activeBoard.id == boardDiv.id ) {
       boardDiv.classList.remove('activeBoard')
       boardDiv.classList.add('hidden')
-      console.log('activeBoard was the same as boardDiv')
-      boardDiv.childNodes.forEach(child => {
-        child.classList.add('hidden')
-      })
+      newListForm.classList.add('hidden')
+      for (list of theLists) {
+        if (list.classList.contains(`ofBoard${board.id}`)){
+          list.classList.add('hidden')
+        }
+      }
     }
     else if (activeBoard.id != boardDiv.id){
       activeBoard.classList.add('hidden')
       activeBoard.classList.remove('activeBoard')
       boardDiv.classList.remove('hidden')
       boardDiv.classList.add('activeBoard')
-      console.log('activeBoard was a different boardDiv')
-      activeBoard.childNodes.forEach(child => {
-        child.classList.add('hidden')
-      })
-      boardDiv.childNodes.forEach(child => {
-        child.classList.remove('hidden')
-      })
+      for (list of theLists) {
+        if (list.classList.contains(`ofBoard${board.id}`)){
+        list.classList.remove('hidden')
+        }
+        else{
+          list.classList.add('hidden')
+        }
+      }
     }
-
   })
 
 
