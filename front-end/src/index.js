@@ -69,18 +69,23 @@ function renderBoard(board) {
   //display the board when clicked
   boardButton.addEventListener('click', () =>{
   let activeBoard = document.querySelector('.activeBoard')
+  let theLists = document.getElementsByClassName('.row')
     //checks to see if activeRecord is null, the same as divBoard, or a different divBoard
     if (activeBoard == null)
     {
       boardDiv.classList.add('activeBoard')
       boardDiv.classList.remove('hidden')
       console.log('activeBoard was null')
-      console.log(`child nodes are ${boardDiv.childNodes}`)
-      boardDiv.childNodes.forEach(child => {
-        child.classList.remove('hidden')
-      })
-
+      for (list of theLists) {
+        if (list.classList.contains(`ofBoard${board.id}`)){
+        list.classList.remove('hidden')
+        }
+        else{
+          list.classList.add('hidden')
+        }
       }
+      
+    }
     else if (activeBoard.id == boardDiv.id ) {
       boardDiv.classList.remove('activeBoard')
       boardDiv.classList.add('hidden')
@@ -109,10 +114,10 @@ function renderBoard(board) {
 }
 
 function renderList(list){
-    let parentDiv = document.querySelector('.container')
+    let parentDiv = document.querySelector('.theBoard')
     //let parentDiv = document.getElementById(`board ${list.board_id}`)
       let divRow = document.createElement("div")
-      divRow.classList.add('.row')
+      divRow.classList.add('.row', `ofBoard${list.board_id}`)
       let listDiv = document.createElement('div')
       listDiv.classList.add('column', 'card')
        //divColumn.className = 'column'
