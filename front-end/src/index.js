@@ -48,12 +48,12 @@ function renderBoard(board) {
    let parentDiv = document.querySelector('.theBoard')
    boardDiv.id = `board ${board.id}`
    boardDiv.classList.add('hidden')
-   
+
 
   //adding list form to the board so users can create new lists.
   let listForm = document.querySelector('.list_form')
     let newListForm = listForm.cloneNode(true)
-    newListForm.classList.add(`ofBoard${board.id}`) 
+    newListForm.classList.add(`ofBoard${board.id}`)
     parentDiv.append(newListForm)
     newListForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -62,6 +62,7 @@ function renderBoard(board) {
 
   //button to display the board
   let boardButton = document.createElement('button')
+    boardButton.className = "boardBtn"
     boardButton.innerText = board.name
     body.append(boardButton, boardDiv)
 
@@ -132,11 +133,12 @@ function renderList(list){
       listDiv.id = list.id
 
       let h6 = document.createElement('h6')
-      h6.textContent = list.name
+      h6.textContent = list.name + "     "
 
       //add button to delete list
       let btn = document.createElement('button')
-      btn.textContent = 'delete list'
+      btn.className = "btnClass"
+      btn.textContent = 'x'
       btn.addEventListener('click', (e) => {
         e.preventDefault()
         deleteList(list)
@@ -184,10 +186,11 @@ function renderList(list){
 function renderTask(task){
   let ul = document.getElementById(`list ${task.list_id}`)
   let li = document.createElement('li')
-  li.textContent = task.name
+  li.textContent = task.name + "    "
   li.className = "list-li"
   //add button to delete li
   let btn = document.createElement('button')
+  btn.className = "btnClass"
   btn.textContent = 'x'
   btn.addEventListener('click', (e) => {
       e.preventDefault()

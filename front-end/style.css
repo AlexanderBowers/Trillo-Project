@@ -32,7 +32,7 @@ p {
 
 .column {
   float: left;
-  width: 25%;
+  width: 24.2%;
   padding: 0 10px;
 }
 
@@ -50,11 +50,14 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #a80000;
+  border-radius: 10px;
+  margin: 5px;
+  color: #2DA8D8;
+  background-color: #2A2B2DFF;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px px white;
 }
 
 .hidden {
@@ -89,13 +92,46 @@ body {
 
 .btn-primary {
   color: white;
-  /* background: green; */
+  background: #2DA8D8;
+  margin-bottom: 5px;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 #2A2B2DFF;
 }
 
 .header {
   background-color: blue;
+}
+
+.list_form {
+  padding-bottom: 20px;
+}
+
+.btnClass {
+  background: #2DA8D8;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+.boardBtn {
+  margin: 1.5px;
+  border-radius: 5px;
+}
+
+.boardBtn:hover {
+
+  box-shadow: 0 8px 5px 0 #2A2B2DFF;
+}
+
+.logo {
+ font-family: 'Lobster', serif;
+ font-size: 50px;
+ text-shadow:  0px 1px 0px #aaa;
+ color: #2DA8D8;
+ text-align: center;
 }
