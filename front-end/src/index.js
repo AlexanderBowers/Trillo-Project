@@ -45,38 +45,47 @@ function fetchTasks() {
 function renderBoard(board) {
    let body = document.querySelector('header')
    let boardDiv = document.createElement('div')
+   let parentDiv = document.querySelector('.theBoard')
    boardDiv.id = `board ${board.id}`
    boardDiv.classList.add('hidden')
-   let parentDiv = document.querySelector('.theBoard')
+   
+
   //adding list form to the board so users can create new lists.
   let listForm = document.querySelector('.list_form')
-  let newListForm = listForm.cloneNode(true);
-    
+    let newListForm = listForm.cloneNode(true)
+    newListForm.classList.add(`ofBoard${board.id}`) 
     parentDiv.append(newListForm)
     newListForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let newList = e.target.childNodes[4].value
     postList(newList, boardDiv)})
 
-
-
-
   //button to display the board
   let boardButton = document.createElement('button')
-  boardButton.innerText = board.name
-  body.append(boardButton, boardDiv)
+    boardButton.innerText = board.name
+    body.append(boardButton, boardDiv)
 
   //display the board's lists when clicked
   boardButton.addEventListener('click', () =>{
-  let activeBoard = document.querySelector('.activeBoard')
-  let theLists = document.getElementsByClassName('.row')
-
+    let activeBoard = document.querySelector('.activeBoard')
+    let theLists = document.getElementsByClassName('.row')
     //checks to see if activeRecord is null, the same as divBoard, or a different divBoard
     if (activeBoard == null)
     {
-      newListForm.classList.remove('hidden')
+      showBoard1(board, boardDiv, theLists, newListForm)
+    }
+    else if (activeBoard.id == boardDiv.id ) {
+      showBoard2(board, boardDiv, theLists, newListForm)
+    }
+    else if (activeBoard.id != boardDiv.id){
+      showBoard3(activeBoard, board, boardDiv, theLists, newListForm)
+    }
+  })
+}
+
+function showBoard1(board, boardDiv, theLists, newListForm){
+  newListForm.classList.remove('hidden')
       boardDiv.classList.add('activeBoard')
-      boardDiv.classList.remove('hidden')
       for (list of theLists) {
         if (list.classList.contains(`ofBoard${board.id}`)){
         list.classList.remove('hidden')
@@ -85,35 +94,30 @@ function renderBoard(board) {
           list.classList.add('hidden')
         }
       }
-      
-    }
-    else if (activeBoard.id == boardDiv.id ) {
-      boardDiv.classList.remove('activeBoard')
-      boardDiv.classList.add('hidden')
+}
+
+function showBoard2(board, boardDiv, theLists, newListForm){
+  boardDiv.classList.remove('activeBoard')
       newListForm.classList.add('hidden')
       for (list of theLists) {
         if (list.classList.contains(`ofBoard${board.id}`)){
           list.classList.add('hidden')
         }
       }
+}
+function showBoard3(activeBoard, board, boardDiv, theLists, newListForm){
+  activeBoard.classList.add('hidden')
+  activeBoard.classList.remove('activeBoard')
+  boardDiv.classList.add('activeBoard')
+  newListForm.classList.add
+  for (list of theLists) {
+    if (list.classList.contains(`ofBoard${board.id}`)){
+    list.classList.remove('hidden')
     }
-    else if (activeBoard.id != boardDiv.id){
-      activeBoard.classList.add('hidden')
-      activeBoard.classList.remove('activeBoard')
-      boardDiv.classList.remove('hidden')
-      boardDiv.classList.add('activeBoard')
-      for (list of theLists) {
-        if (list.classList.contains(`ofBoard${board.id}`)){
-        list.classList.remove('hidden')
-        }
-        else{
-          list.classList.add('hidden')
-        }
-      }
+    else{
+      list.classList.add('hidden')
     }
-  })
-
-
+  }
 }
 
 function renderList(list){
