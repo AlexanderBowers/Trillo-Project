@@ -39118,3 +39118,45 @@ Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 1.2ms | Allocations: 793
 Completed 200 OK in 64ms (Views: 57.7ms | ActiveRecord: 3.0ms | Allocations: 13505)
 
 
+Started GET "/boards" for ::1 at 2021-01-28 22:21:46 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 830)
+
+
+Started GET "/lists" for ::1 at 2021-01-28 22:21:46 -0800
+Started GET "/tasks" for ::1 at 2021-01-28 22:21:46 -0800
+Processing by ListsController#index as */*
+Processing by TasksController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1966)
+
+
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 2844)
+
+
+Started GET "/boards" for ::1 at 2021-01-28 22:23:04 -0800
+Processing by BoardsController#index as */*
+  [1m[36mBoard Load (0.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 812)
+
+
+Started GET "/lists" for ::1 at 2021-01-28 22:23:04 -0800
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1387)
+
+
+Started GET "/tasks" for ::1 at 2021-01-28 22:23:04 -0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1596)
+
+
