@@ -77,6 +77,10 @@ p {
   }
 }
 
+.board_form {
+  padding-bottom: 20px;
+}
+
 
 body {
   background: #232425;
@@ -88,6 +92,10 @@ body {
   /* background: green; */
 }
 
+.btn-primary:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .header {
-  background-color: blue; 
+  background-color: blue;
 }
